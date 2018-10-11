@@ -3,14 +3,12 @@ const request = require('request-promise');
 const url = `https://swapi.co/api/people/1`
 
 const getVehicle = (url) => {
-    request(url, (err, res, body) => {
-        if(err) {
-            console.log(err);
-            return;
-        }
-        console.log('Vehicle Body', body);
+    request(url)
+    .then(res => {
+        console.log('Vehicle Body', res);
         console.log('')
     })
+    .catch(err => console.log(err));
 }
 console.clear()
 request(url)

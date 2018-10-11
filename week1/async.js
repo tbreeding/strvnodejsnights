@@ -2,15 +2,14 @@ const request = require('request-promise');
 
 const url = `https://swapi.co/api/people/1`
 
-const getVehicle = (url) => {
-    request(url, (err, res, body) => {
-        if(err) {
-            console.log(err);
-            return;
-        }
-        console.log('Vehicle Body', body);
-        console.log('')
-    })
+const getVehicle = async (url) => {
+    try {
+        let res = await request(url);
+        console.log('Vehicle body:', res);
+        console.log('');
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 (async function() {
