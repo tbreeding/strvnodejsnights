@@ -14,7 +14,7 @@ const getVehicle = async (url) => {
 
 (async function() {
     console.clear()
-    try{
+    try {
         const res = await request(url)
         JSON.parse(res).vehicles.map(vehicle => {
             getVehicle(vehicle);
@@ -22,6 +22,4 @@ const getVehicle = async (url) => {
     } catch(err) {
         console.log(err)
     }
-
-
 })()
