@@ -4,11 +4,11 @@ const { validate } = require('./../validations')
 const operations = require('./../operations/dogs')
 const schemas = require('./../validations/schemas/dogs')
 
-async function getAll(ctx) {
+const getAll = async(ctx)  => {
   ctx.body = await operations.getAll()
 }
 
-async function getById(ctx) {
+const getById = async (ctx) => {
   const input = {
     id: parseInt(ctx.params.id),
   }
@@ -16,7 +16,7 @@ async function getById(ctx) {
   ctx.body = await operations.getById(input)
 }
 
-async function createDog(ctx) {
+const createDog = async (ctx) => {
   const input = {
     name: ctx.request.body.name,
     breed: ctx.request.body.breed,
