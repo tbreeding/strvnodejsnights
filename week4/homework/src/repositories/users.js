@@ -2,7 +2,7 @@
 
 const R = require('ramda')
 const errors = require('../utils/errors')
-const users = require('./../database/users.json')
+const users = require('../database/users.json')
 
 function findAll() {
   return users
