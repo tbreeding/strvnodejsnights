@@ -16,7 +16,7 @@ const getById = async (ctx) => {
   ctx.body = await operations.getById(input)
 }
 
-const createDog = async (ctx) => {
+const create = async (ctx) => {
   const input = {
     name: ctx.request.body.name,
     breed: ctx.request.body.breed,
@@ -29,8 +29,12 @@ const createDog = async (ctx) => {
   ctx.body = response
 }
 
+const update = async (ctx) => {
+  
+}
 module.exports = {
   getAll,
   getById,
-  createDog,
+  create,
+  update
 }

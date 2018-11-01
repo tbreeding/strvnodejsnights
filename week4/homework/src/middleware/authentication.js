@@ -4,7 +4,7 @@ const operations = require('../operations/users')
 const { validate } = require('../validations')
 const schemas = require('../validations/schemas/users')
 
-async function authenticate(ctx, next) {
+const authenticate = async (ctx, next) => {
   if (!ctx) {
     throw new Error('Context has to be defined')
   }
@@ -24,7 +24,7 @@ async function authenticate(ctx, next) {
   return next()
 }
 
-function parseHeader(hdrValue) {
+const parseHeader = hdrValue => {
   if (!hdrValue || typeof hdrValue !== 'string') {
     return null
   }

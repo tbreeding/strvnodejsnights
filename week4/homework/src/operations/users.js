@@ -5,7 +5,7 @@ const userRepository = require('../repositories/users')
 const errors = require('../utils/errors')
 const crypto = require('../utils/crypto')
 
-async function signUp(input) {
+const signUp = async (input) => {
   log.info({ input }, 'signUp')
   const user = {
     name: input.name,
@@ -23,7 +23,24 @@ async function signUp(input) {
   return newUser
 }
 
-async function verifyTokenPayload(input) {
+const signIn = async (input) => {
+  log.info({ input: input.email }, 'signIn')
+  const user = await userRepository.findByEmail(input.email)
+
+  if (!user) {
+    throw new errors.ConflictError('Incorrect Email Address')
+  }
+  const authenticated = await crypto.comparePasswords(input.password, user.password)
+
+  if(!authenticated) throw new errors.ConflictError('Incorrect Password')
+
+  user.accessToken = await crypto.generateAccessToken(user.id)
+  userRepository.save(user)
+  log.info('signIn successful')
+  return user
+}
+
+const verifyTokenPayload = async (input) => {
   log.info({ input }, 'verifyTokenPayload')
   const jwtPayload = await crypto.verifyAccessToken(input.jwtToken)
   const now = Date.now()
@@ -45,5 +62,6 @@ async function verifyTokenPayload(input) {
 
 module.exports = {
   signUp,
+  signIn,
   verifyTokenPayload,
 }

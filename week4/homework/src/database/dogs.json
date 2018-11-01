@@ -1,23 +1,30 @@
 [
     {
-      "id": 1,
-      "name": "Hercules",
-      "breed": "Shiba Inu",
-      "birthYear": 2013,
-      "photo": "https://upload.wikimedia.org/wikipedia/commons/d/df/Doge_homemade_meme.jpg"
+        "id": 1,
+        "name": "Hercules",
+        "breed": "Shiba Inu",
+        "birthYear": 2013,
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/d/df/Doge_homemade_meme.jpg"
     },
     {
-      "id": 2,
-      "name": "Pavel",
-      "breed": "Chau Chau",
-      "birthYear": 2010,
-      "photo": "https://img-ovh-cloud.zszywka.pl/0/0532/0086-chau-chau-panda-d-.jpg"
+        "id": 2,
+        "name": "Pavel",
+        "breed": "Chau Chau",
+        "birthYear": 2010,
+        "photo": "https://img-ovh-cloud.zszywka.pl/0/0532/0086-chau-chau-panda-d-.jpg"
     },
     {
-      "id": 3,
-      "name": "Pongo",
-      "breed": "Akita Inu",
-      "birthYear": 2011,
-      "photo": "https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg"
+        "id": 3,
+        "name": "Pongo",
+        "breed": "Akita Inu",
+        "birthYear": 2011,
+        "photo": "https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Doggie",
+        "breed": "Rare",
+        "birthYear": 2016,
+        "photo": "http://www.doggies.com/doggie.jpg"
     }
-  ]
+]

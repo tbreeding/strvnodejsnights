@@ -4,7 +4,7 @@ const config = require('../config')
 const appErrors = require('../utils/errors')
 const logger = require('../utils/logger')
 
-async function handleErrors(ctx, next) {
+const handleErrors = async (ctx, next) => {
   try {
     return await next()
   } catch (err) {
@@ -26,7 +26,7 @@ async function handleErrors(ctx, next) {
   }
 }
 
-function handleNotFound() {
+const handleNotFound = () => {
   throw new appErrors.NotFoundError()
 }
 

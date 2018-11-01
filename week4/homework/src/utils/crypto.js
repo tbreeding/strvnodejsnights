@@ -33,7 +33,7 @@ const hashPassword = (password) => {
 
 const comparePasswords = (plaintext, ciphertext) => {
     return bcrypt.compare(peperify(plaintext), ciphertext)
-  }
+}
 
 const peperify = (password) => {
     return crypto.createHmac('sha1', config.auth.secret)
