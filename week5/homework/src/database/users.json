@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Arthur Dent",
+        "email": "dent@example.com",
+        "password": "Password123!",
+        "disabled": false
+    },
+    {
+        "id": 2,
+        "name": "Ford Prefect",
+        "email": "prefect@example.com",
+        "password": "Password123!",
+        "disabled": false
+    },
+    {
+        "id": 3,
+        "name": "Tim Breeding",
+        "email": "tim.breeding@yahoo.com",
+        "password": "$2b$10$gsihqELkqc8L4Qcn3ufocego7r6Fesgp7uKNTAxcJjfJW9UuhkXUi",
+        "disabled": false,
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTU0MTIyNTY1NSwiZXhwIjoxNTQxMjI5MjU1LCJpc3MiOiJjb20uc3Rydi5ub2RlanMtbmlnaHRzLmxvY2FsIn0.UKTSYBINVHgR8t_KeHfLjjtjV-nFsfB7tujGu-2ye3Y"
+    }
+]

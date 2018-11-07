@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  pgdb:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: dogbook
+    volumes:
+      - ./src/database/pgdb:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  admin:
+    image: adminer
+    ports:
+      - 8080:8080
